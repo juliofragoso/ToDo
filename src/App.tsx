@@ -14,7 +14,7 @@ function App() {
   
   const [concludedTasks, setConcludedTasks] = useState(0);
   const [newTaskDescription, setNewTaskDescription] = useState('');
-  const [tasks, setTasks] = useState(['']);
+  const [tasks, setTasks] = useState(['Essas tarefas são apenas exemplos', 'Você pode deleta-las sem medo', 'E inserir as suas no campo ai de cima']);
   const taskCounter = tasks.length;
 
   function addNewTask(event:FormEvent){
