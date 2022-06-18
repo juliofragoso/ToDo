@@ -14,7 +14,7 @@ function App() {
   
   const [concludedTasks, setConcludedTasks] = useState(0);
   const [newTaskDescription, setNewTaskDescription] = useState('');
-  const [tasks, setTasks] = useState([]);
+  const [tasks, setTasks] = useState(['']);
   const taskCounter = tasks.length;
 
   function addNewTask(event:FormEvent){
@@ -22,18 +22,15 @@ function App() {
     setTasks([...tasks, newTaskDescription])
     setNewTaskDescription('')
   }
-
   function handleAddNewTaskChange(event:ChangeEvent<HTMLInputElement>){
     setNewTaskDescription(event.target.value)
   }
-
   function concludeTask(){
     setConcludedTasks(concludedTasks+1);
   }
   function unconcludeTask(){
     setConcludedTasks(concludedTasks-1);
   }
-
   function deleteConcludedTask(taskToDelete:string){
     const taskListWithoutDeletedOne = tasks.filter(task =>{
       return task !== taskToDelete;
@@ -54,7 +51,7 @@ function App() {
       <Header />
       <div className={styles.wrapper}>
         <form onSubmit={addNewTask} className={styles.form}>
-            <input placeholder="Adicione uma nova tarefa" autoComplete="off" name="task" value={newTaskDescription} onChange={handleAddNewTaskChange} />
+            <input placeholder="Adicione uma nova tarefa" required autoComplete="off" name="task" value={newTaskDescription} onChange={handleAddNewTaskChange} />
             <button type="submit">Criar <FiPlusCircle size={16} /></button>
         </form>
 
