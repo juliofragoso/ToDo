@@ -1,0 +1,62 @@
+.task{
+    width:100%;
+    background:var(--gray500);
+    border:1px solid var(--gray400);
+    color:var(--gray100);
+    border-radius: 0.5rem;
+    display: grid;
+    grid-template-columns: 2.5rem auto 2rem;
+    padding:1rem;
+    margin-bottom: 0.75rem;
+}
+
+.checkDefault{
+    background: url(../../assets/checkbox-unchecked.svg) no-repeat 7px 1px;
+    cursor: pointer;
+    
+}
+.checkDefault:hover{
+    background: url(../../assets/checkbox-unchecked-hover.svg) no-repeat 7px 1px;
+    cursor: pointer;
+}
+.checkConcluded{
+    background: url(../../assets/checkbox-checked.svg) no-repeat 7px 1px;
+    cursor: pointer;
+    
+}
+.checkConcluded:hover{
+    background: url(../../assets/checkbox-checked-hover.svg) no-repeat 7px 1px;
+    cursor: pointer;
+}
+
+
+
+.default{
+   font-size: 0.875rem;
+   align-items: center;
+
+}
+.concluded{
+    font-size: 0.875rem;
+    align-items: center;
+    text-decoration: line-through;
+    color:var(--gray300)
+ }
+
+.task button{
+    background:transparent;
+    border:none;
+    color:var(--gray300);
+    transition: 0.2s;
+    border-radius: 0.5rem;
+    padding:0.375rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.task button:hover{
+    background:var(--gray400);
+    border:none;
+    color:var(--red);
+    cursor: pointer;
+}
