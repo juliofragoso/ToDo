@@ -1,9 +1,12 @@
 .wrapper{
   margin:0 auto;
-  width:46rem;
+  max-width:46rem;
 }
 .bodyTasks{
-    margin-top:4rem;
+    margin:4rem 0.5rem 0;
+    width:96.5vw;
+    max-width: 46rem;
+
 }
 .bodyTasksHeader{
     display: flex;
@@ -27,9 +30,10 @@
 
 /* INPUT */
 .form{
-    width:100%;
+    width:96.5vw;
+    max-width: 46rem;
     display:flex;
-    margin-top:-1rem;
+    margin:-1rem 0.5rem 0;
     gap:0.5rem;
 }
 
@@ -37,7 +41,8 @@
     background:var(--gray500);
     color:var(--gray300);
     height:3.375rem;
-    width:39.875rem;
+    width: 100%;
+    max-width:39.875rem;
     padding:1rem;
     border:1px solid var(--gray700);
     border-radius:0.5rem;
